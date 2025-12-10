@@ -208,9 +208,9 @@
             const [dialogueStep, setDialogueStep] = useState(0);
             
             const dialogues = [
-                "오늘도... 아무 일도 없었네.",
-                "지루해. 뭔가 재미있는 거 없을까?",
-                "(스마트폰 화면이 반짝인다)"
+                "오늘도 아무 일도 없었네.",
+                "지루한데 뭔가 재미있는 거 없을까?",
+                "(스마트폰 화면이 반짝인다...)"
             ];
 
             const handleStartClick = (e) => { e.stopPropagation(); setIsStarted(true); };
@@ -259,10 +259,10 @@
             
             // 허브 독백
             const getThought = () => {
-                if (visitedRooms.size === 0) return "어디를 먼저 둘러볼까? 다 재밌어 보이는데...";
-                if (visitedRooms.size === 1) return "시간 가는 줄 모르겠네. 다음은 어디지?";
-                if (visitedRooms.size === 2) return "아직 안 가본 곳이 하나 남았어.";
-                return "이제 다 본 건가? ...아니야, 뭔가 부족해.";
+                if (visitedRooms.size === 0) return "어디를 먼저 둘러볼까? 다 재밌어 보이는데.";
+                if (visitedRooms.size === 1) return "시간 가는 줄 모르겠네... 다음은 어디지?";
+                if (visitedRooms.size === 2) return "이제 다 본 건가? ...아니야, 뭔가 부족해.";
+                return "아직 안 가본 곳이 하나 남았어.";
             };
 
             // 랜덤 반짝이 생성
@@ -285,10 +285,10 @@
 
             const handleRoomClick = (id) => {
                 let text = "";
-                if (id === 'shorts') text = "쇼츠는 정말 좋아. 그냥 계속 스크롤하자...질릴때까지.";
+                if (id === 'shorts') text = "쇼츠를 그냥 계속 스크롤하자...질릴때까지.";
                 else if (id === 'meme') text = "요즘 최신 밈은 무조건 알고 있어야지.";
-                else if (id === 'shopping') text = "개인정보가 넘어간다는 소문이 있던데... 모르겠고. 일단 돌려볼까?";
-                else if (id === 'clicker') text = "아무 생각 없이 누르기만 하면 돼. 이게 힐링이지..."; // 클리커 대사
+                else if (id === 'shopping') text = "개인정보가 넘어간다는 소문이 있던데... 모르겠고... 일단 돌려볼까?";
+                else if (id === 'clicker') text = "아무 생각 없이 좋아요를 누르기만 하면 돼. 이게 힐링이지..."; // 클리커 대사
 
                 setDialogueText(text);
                 setPendingRoom(id);
@@ -408,13 +408,13 @@
         };
 
         const VIDEO_POOL = [
-            { id: 1, type: "file", username: "alice_lisa", description: "이게 맞아? 🌀 #wasterland", music: "Original Sound - Alice", likes: "1.2K", comments: "402", shares: "125", videoUrl: "./shorts_01.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alice" },
-            { id: 2, type: "file", username: "mukbang_king", description: "야식 참기 LV.99 🍔", music: "Yummy - Cooking BGM", likes: "854K", comments: "2.1K", shares: "5.2K", videoUrl: "./shorts_02.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Cook" },
-            { id: 3, type: "file", username: "puppy_lover", description: "귀여움 한도초과 🐶", music: "Happy Dog - BGM World", likes: "2.5M", comments: "10K", shares: "45K", videoUrl: "./shorts_03.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Buster" },
-            { id: 4, type: "file", username: "dev_daily", description: "개발자 현실 코딩 💻 #error", music: "Lo-Fi Beats", likes: "12K", comments: "532", shares: "1.1K", videoUrl: "./shorts_04.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dev" },
-            { id: 5, type: "file", username: "travel_vlog", description: "힐링되는 풍경 🌊 #ocean", music: "Ocean Waves", likes: "450K", comments: "3.4K", shares: "12K", videoUrl: "./shorts_05.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Travel" },
-            { id: 6, type: "file", username: "satisfying_asmr", description: "마음이 편안해지는 영상 🎨", music: "Colors - Art BGM", likes: "98K", comments: "890", shares: "2.3K", videoUrl: "./shorts_06.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Art" },
-            { id: 7, type: "file", username: "dance_challenge", description: "요즘 유행하는 챌린지 💃", music: "Trending Pop", likes: "1.1M", comments: "5K", shares: "20K", videoUrl: "./shorts_07.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dance" }
+            { id: 1, type: "file", username: "alice_lisa", description: "Cat DIVA AHHH #kitty #funvideo", music: "Original Sound - Alice", likes: "1.2K", comments: "402", shares: "125", videoUrl: "./shorts_01.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alice" },
+            { id: 2, type: "file", username: "gomulovee", description: "고무짜기 붐은 온다😍 #고무짜기 #fyp", music: "Yummy - Cooking BGM", likes: "854K", comments: "2.1K", shares: "5.2K", videoUrl: "./shorts_02.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Cook" },
+            { id: 3, type: "file", username: "sensoryclub", description: "😮‍💨💅 #metroboomin #ykniece #dancingfruit #heybearremix #sensoryclub", music: "Happy Dog - BGM World", likes: "2.5M", comments: "10K", shares: "45K", videoUrl: "./shorts_03.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Buster" },
+            { id: 4, type: "file", username: "mukbanger_035", description: "밥먹자....r", music: "Lo-Fi Beats", likes: "12K", comments: "532", shares: "1.1K", videoUrl: "./shorts_04.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dev" },
+            { id: 5, type: "file", username: "lonsogonzalezc", description: "ayuda gente #chile #terror", music: "Ocean Waves", likes: "450K", comments: "3.4K", shares: "12K", videoUrl: "./shorts_05.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Travel" },
+            { id: 6, type: "file", username: "ava.dye", description: "this is so twilight!! @leilani @atomicski #ski #atomic #twilight", music: "Colors - Art BGM", likes: "98K", comments: "890", shares: "2.3K", videoUrl: "./shorts_06.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Art" },
+            { id: 7, type: "file", username: "hiiii1111", description: "i’m so famous", music: "Trending Pop", likes: "1.1M", comments: "5K", shares: "20K", videoUrl: "./shorts_07.mp4", userAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Dance" }
         ];
 
         /* [SCENE 2] SHORTS ROOM */
@@ -481,7 +481,7 @@
                     {showEntryDialogue && (
                         <>
                             <AlicePortrait faceId={1} visible={true} />
-                            <DialogueBox text="쇼츠는 정말 좋아. 그냥 계속 스크롤하자...질릴때까지." onClick={() => setShowEntryDialogue(false)} />
+                            <DialogueBox text="아무 의미 없는 영상을 계속 보고있자면 뇌가 녹는거같아." onClick={() => setShowEntryDialogue(false)} />
                         </>
                     )}
                 </div>
@@ -596,7 +596,7 @@
                         <Icon name="shopping-bag" size={20}/> <span className="text-lg">{cartCount}</span>
                     </div>
                     <div className="absolute top-0 left-0 w-full z-30 bg-black/80 text-yellow-400 text-xl py-1 overflow-hidden whitespace-nowrap">
-                        <div className="animate-marquee inline-block font-['ZenSerif']">🎉 김*지님이 아이폰 15 Pro에 당첨되었습니다! 🎉 이*혁님이 500,000원 쿠폰을 받았습니다!</div>
+                        <div className="animate-marquee inline-block font-['ZenSerif']">🎉 강*지님이 아이폰 15 Pro에 당첨되었습니다! 🎉 이*학님이 500,000원 쿠폰을 받았습니다!</div>
                     </div>
                     <div className="flex-1 flex flex-col items-center p-4 w-full overflow-y-auto pb-20 pt-16">
                         <h1 className="text-5xl text-white italic transform -rotate-2 mt-2 mb-6 drop-shadow-lg font-[Griffy]">LUCKY SPIN</h1>
@@ -666,13 +666,13 @@
                     {showEntryDialogue && (
                         <>
                             <AlicePortrait faceId={1} visible={true} />
-                            <DialogueBox text="개인정보가 넘어간다는 소문이 있던데... 모르겠고. 일단 돌려볼까?" onClick={() => setShowEntryDialogue(false)} />
+                            <DialogueBox text="엄청 싸다!! 장바구니에 담아야돼!!" onClick={() => setShowEntryDialogue(false)} />
                         </>
                     )}
                     {showPostErrorDialogue && (
                         <>
                             <AlicePortrait faceId={1} visible={true} />
-                            <DialogueBox text="아니 왜 또 안된다는거야? 다 입력했는데 짜증나게..." onClick={() => setShowPostErrorDialogue(false)} />
+                            <DialogueBox text="왜 자꾸 안된다는거야? 다 입력했는데..." onClick={() => setShowPostErrorDialogue(false)} />
                         </>
                     )}
                 </div>
@@ -804,7 +804,7 @@
                     {showEntryDialogue && (
                         <>
                             <AlicePortrait faceId={1} visible={true} />
-                            <DialogueBox text="아무 생각 없이 누르기만 하면 돼. 이게 힐링이지..." onClick={() => setShowEntryDialogue(false)} />
+                            <DialogueBox text="아무 생각 없이 누르기만 하면 돼... 이게 힐링이지..." onClick={() => setShowEntryDialogue(false)} />
                         </>
                     )}
                 </div>
@@ -829,16 +829,16 @@
                 "눈이 너무 뻑뻑하고 아파.",
                 "머리도 멍하고...",
                 "이제 그만 자야겠지?",
-                "내일 학교도 가야 하는데...",
+                "내일 또 일찍 일어나야해...",
                 "...하지만",
                 "조금만 더 보면 안 될까?",
-                "아직 못 본 쇼츠가 너무 많은데.",
-                "새로 올라온 밈도 확인해야 하고...",
+                "아직 못 본 게시글이 너무 많은데.",
+                "새로 올라온 영상도 확인해야 하고...",
                 "아냐, 충전기를 꽂고 자야지.",
                 "충전기가 어디 있었더라...",
                 "(충전기를 찾는다)",
                 "여기 있네.",
-                "이걸 꽂으면... 계속 볼 수 있어.",
+                "이걸 꽂으면 계속 볼 수 있어.",
                 "아니면 그냥 자버릴까?",
                 "너무 피곤한데...",
                 "하지만...",
